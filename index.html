@@ -352,5 +352,16 @@ This page provides an overview of my knowledge in web development—what I do, h
     <!--end of footer-->
 
         <script src="scripts/main.js"></script>
+        <script>
+            // scripts/main.js
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+        </script>
     </body>
 </html>
